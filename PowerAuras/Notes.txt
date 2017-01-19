@@ -1,0 +1,78 @@
+
+
+This Mod was created to have a better visibility when you gain buffs or débuffs. Very util for shorts buffs or débuffs, it allows you to have in the center of the screen, or around your character, very customizable visual effects, rather than all the time have to look on the other side of the screen to see if you have a buff or a debuff on you.
+
+Initially created to have an better visibility on the short buffs like "clear cast" or some boost trinket you activate, it works now with debuffs (whatever their name) and also debuff types like Magic or Curse.
+
+How to use :
+
+Type /powa
+to open the effect editor, then you can choose the texture to apply to the effect, the position, the size, the symmetry, etc...
+Then, enter the name or a part of the name of the buff / débuff (ex: if you try to activate the visual effect on "Clear cast", you can enter only "Clear" in the name of the buff).
+
+The Mod will take care to show the effect where you wish and to remove it when the buff is finished.
+
+
+You can so easily change the 20 available textures or add new ones.
+
+
+Texture Pack :
+--------------
+
+Unzip this file like you do with the Mod, you will now have some more textures on the Power Auras directory. Just run the game, type /powa and go to Advanced Options to put the parameter "Max number of textures" to the last installed texture file (if you have installed the "TexturePack21-30", you have now a maximum of 30 textures).
+
+
+
+- = Updates: =-
+
+Version 2.20-vanila : 
+-------------- 
++ Added weapon enchant, you can use weapon enchant name as buff. if you add 'main' or 'off' words, it will look in specific slots.
++ Backported image auras from newest mod, so you can use up to 50 ones. Dont forget to adjust number in advanced options.
+
+Version 2.10 : 
+-------------- 
++ Added a button "+" to easily add more effects 
++ Added a button "-" to clear all unused effects and sort the other by type 
++ You can now move the effects with more precision and anywhere one the screen (or outside ;)
++ Added a way to ignore or not the upper/lowercase of buffs/debuffs names (fixing some bugs in non-latin versions of the game) 
++ Added two new animation's options : "Begin animation" and "End animation", allowing more cool effects combinations 
++ Changed numbers of animations by names 
++ Finally, added the 10th animation 
++ Added a option to show the 2 shortest timers for both buffs and debuffs 
++ Visual upgrade of the option interface 
+- Useless option "Quick Hide" as been removed 
+- Advanced command line parameters removed (no more used) 
+- Finally, fixed the bug which cause some effects beeing randomly activated or deactivated 
+- Some minor animation bugs fixes 
+
+
+Version 2.01 :
+--------------
++ Added a timer for debuffs and debuff types (and more functions)
++ Added the option "animation speed" for all effects
++ Added the option "animation duration", if you want an effect to be hidden after some time
++ Added the option to show the effects only when buff/debuff are not active
++ Added an option to easily change the number of textures available to the Mod
+- Fixed a bug causing incorrect display of debuff types on non-english versions of the game
+- Fixed a bug not allowing to save the maximum number of texture correctly
+
+
+Version 1.12b :
+---------------
+- Added 5 textures and 3 animations (don't overwrite your textures if you modified or created new ones)
+- Added a movable timer for buffs (debuffs in a future version). This timer will always show the remaining time of the shortest buff.
+- You can now increase the maximum number of effects to 100 (with the command /powa maxeffect)
+- You can enter several names of buffs/debuffs on a single page of effect, if you separate them by "/" (ex: Fortitude/Mark of the wild)
+- You can activate a type of debuff which isn't a Magic, Disease... with the word "None" (the effect will show if the debuff has no particular type). Furthermore, you can enter multiple type of debuffs to the "Name of the debuff" (to track Poison and Disease for example).
+
+
+Version 1.12a :
+---------------
+- Fixed a problem with memory usage, it should work great now
+
+
+Version 1.12:
+-------------
+- Added the possibility to save yours effects in a list common to all the characters, juste click the button "List"
+- Added advanced options, available by typing : / powa help
