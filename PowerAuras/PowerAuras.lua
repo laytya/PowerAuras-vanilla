@@ -310,7 +310,8 @@ function PowaCompareWeaponBuff(xnum)
 				local text = getglobal("Powa_TooltipTextLeft"..i):GetText();
 				if ( not text ) then
 					break;
-				elseif ( strfind(strlower(text), pword) ) then
+				elseif ((PowaSet[xnum].ignoremaj == true and strfind(strlower(text), strlower(pword)) or
+						strfind(strlower(text), pword)) then
 					Powa_Tooltip:Hide();
 					Powa_Frames[xnum].buffindex = 16;
 					return true;
@@ -324,7 +325,8 @@ function PowaCompareWeaponBuff(xnum)
 				local text = getglobal("Powa_TooltipTextLeft"..i):GetText();
 				if ( not text ) then
 					break;
-				elseif ( strfind(strlower(text), pword) ) then
+				elseif ((PowaSet[xnum].ignoremaj == true and strfind(strlower(text), strlower(pword)) or
+						strfind(strlower(text), pword)) then
 					Powa_Tooltip:Hide();
 					Powa_Frames[xnum].buffindex = 17;
 					return true;
