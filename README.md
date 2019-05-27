@@ -7,7 +7,7 @@ This Mod was created to have a better visibility when you gain buffs, debuffs an
 Initially created to have an better visibility on the short buffs like "clear cast" or some boost trinket you activate, it works now with debuffs (whatever their name), debuff types like Magic or Curse, combo points, Aoe debuffs and weapon enchants.
 
 
-How to use :
+# How to use :
 
 1. Type /powa, to open the effect browser
 2. Clic on the button "New" to create a new effect
@@ -16,18 +16,22 @@ How to use :
 5. Enter the name of the buff, debuff... juste below (or a part of the buff, like "clear" for activation with the buff "clear cast"). Don't forget to read the tooltips for more help on ways to enter the names
 6. It's ready ! Close all windows, when you gain the buff/debuff, the effect appear
 
-#Last changes:
+# Last changes:
 - Added weapon enchant tracking, 
 - Added backported images from retail
 
-#Download
+## v2.21
++ Added combat status check - just type "combat" in buffname field
+
+
+# Download
 
 https://github.com/laytya/PowerAuras-vanilla/releases
 
-#Installation
+# Installation
 
 Just copy "PowerAuras" folder to your addon's directory.
 
-#Credits
+# Credits
 
 originaly made by Sinsthar
