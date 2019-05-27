@@ -8,16 +8,17 @@
 --     en cas de buff ou de debuff.
 -- -------------------------------------------
 
-PowaVersion = "v2.20-vanila"
+PowaVersion = "v2.21-vanila"
 
 CurrentAura = 1;
 CurrentSecondeAura = 0;
-MaxAuras = 20;
+MaxAuras = 50;
 SecondeAura = MaxAuras + 1;
 CurrentTestAura = MaxAuras + 2;
 
 PowaEnabled = 0;
 PowaModTest = false; -- on test les effets
+local powaInCombat = false
 
 Powa_FramesVisibleTime = {}; -- visible ou pas
 
@@ -96,6 +97,8 @@ function Powa_OnLoad()
 	this:RegisterEvent("PLAYER_AURAS_CHANGED");
 	this:RegisterEvent("PLAYER_ENTERING_WORLD");
 	this:RegisterEvent("VARIABLES_LOADED");
+	this:RegisterEvent("PLAYER_REGEN_DISABLED");
+	this:RegisterEvent("PLAYER_REGEN_ENABLED");
 
 	Powa_Frames = {};
 	Powa_textures = {};
@@ -340,7 +343,9 @@ function PowaCompareWeaponBuff(xnum)
 end
 
 function PowaCompareBuffDebuff(xnum)
-	if (PowaSet[xnum].isdebuff) then -- un debuff
+	if string.upper(PowaSet[xnum].buffname) == "COMBAT" and powaInCombat then
+		return true
+	elseif (PowaSet[xnum].isdebuff) then -- un debuff
 		for i = 1, 16 do
 			Powa_Frames[xnum].buffindex = 0;
 			for pword in string.gfind(PowaSet[xnum].buffname, "[^/]+") do
@@ -458,7 +463,12 @@ function Powa_OnEvent()
 	getglobal("PowaBarAuraTextureSliderHigh"):SetText(PowaGlobal.maxtextures);
 	PowaEnabled = 1;
 	Powa_CreateTimer();
-
+   elseif event == "PLAYER_REGEN_DISABLED" then -- incombat
+			powaInCombat = true
+			DoCheckBuffs = true;
+   elseif event == "PLAYER_REGEN_ENABLED" then -- exiting combat
+			powaInCombat = false		
+			DoCheckBuffs = true;
    elseif event == "PLAYER_AURAS_CHANGED" then -- passe les buffs en revue	
    
 	if (PowaModTest == false) then

@@ -3,7 +3,7 @@
 ## Notes: Buff/Debuff effects around the player.
 ## Author: Sinsthar
 ## Continue: LaYt 
-## Version: 2.20-vanila
+## Version: 2.21-vanila
 ## SavedVariablesPerCharacter: PowaSet, PowaMisc
 ## SavedVariables: PowaGlobal, PowaSavedBuff, PowaSavedDebuff, PowaSavedDebuffType
 localisation.lua
