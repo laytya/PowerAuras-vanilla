@@ -1,6 +1,7 @@
 ## Interface: 11200
 ## Title: Power Auras 
 ## Notes: Buff/Debuff effects around the player.
+## Notes-ruRU: Бафф/Дебафф эффекты вокруг игрока.
 ## Author: Sinsthar
 ## Continue: LaYt 
 ## Version: 2.21-vanila
